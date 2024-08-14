@@ -15,8 +15,6 @@ def get_coefficients(warehouses):
     headers = {'Authorization': TOKEN}
 
     resp = requests.get(url, headers=headers)
-    with open('test.json', 'w') as f:
-        f.write(resp.text)
     return resp.json()
 
 
